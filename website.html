@@ -8,9 +8,9 @@
         <div class="content-area">
             <div class="content-box" id="1">
                 <form name="nameForm">
-                    <label for="name">Name: </label>
-                    <input type="text" id="name" required>
-                    <button type="button" onclick="nameAlert()">Click Me</button>
+                    <label for="firstName">Name: </label>
+                    <input type="text" id="firstName" required>
+                    <button type="button" onclick="return nameAlert()">Alert Me!</button>
                 </form>
             </div>
             <aside id="change-color">
@@ -34,7 +34,12 @@
         <script>
 
             function nameAlert() {
-                alert(Hello)
+                if(document.nameForm.firstName.value.trim() == ""){
+                    alert("Enter your name")
+                } else{
+                    alert("Hello " + document.nameForm.firstName.value + "!")
+                }
+
             }
 
         </script>
