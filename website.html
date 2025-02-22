@@ -15,8 +15,7 @@
             </div>
             <aside id="change-color">
                 <div class="content-box">
-                    <h1>This is content box 2</h1>
-                    <p>Lorem ipsum...</p>
+                    <button type="button" onclick="return changeColor()">Change Color</button>
                 </div>
             </aside>
             <div class="content-box">
@@ -39,6 +38,15 @@
                 } else{
                     alert("Hello " + document.nameForm.firstName.value + "!")
                 }
+
+            }
+
+            function changeColor() {
+                const color = document.body.style.backgroundColor;
+                const newColor = color === "lightskyblue" ? "lightgreen" : "lightskyblue";
+                
+
+                document.body.style.backgroundColor = newColor;
 
             }
 
