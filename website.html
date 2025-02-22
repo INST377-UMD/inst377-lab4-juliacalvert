@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>INST 377 - Lab 4</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>INST377 - Lab 4</h1>
+        <div class="content-area">
+            <div class="content-box" id="1">
+                <form name="nameForm">
+                    <label for="firstName">Name: </label>
+                    <input type="text" id="firstName" required>
+                    <button type="button" onclick="return nameAlert()">Alert Me!</button>
+                </form>
+            </div>
+            <aside id="change-color">
+                <div class="content-box">
+                    <button type="button" onclick="return changeColor()">Change Color</button>
+                </div>
+            </aside>
+            <div class="content-box">
+                <h1>This is content box 3</h1>
+                <p>Lorem ipsum...</p>
+            </div>
+            <aside id="add-text">
+                <div class="content-box">
+                    <h1>This is content box 4</h1>
+                    <p>Lorem ipsum...</p>
+                </div>
+            </aside>
+        </div>
+
+        <script>
+
+            function nameAlert() {
+                if(document.nameForm.firstName.value.trim() == ""){
+                    alert("Enter your name")
+                } else{
+                    alert("Hello " + document.nameForm.firstName.value + "!")
+                }
+
+            }
+
+            function changeColor() {
+                const color = document.body.style.backgroundColor;
+                const newColor = color === "lightskyblue" ? "lightgreen" : "lightskyblue";
+                
+
+                document.body.style.backgroundColor = newColor;
+
+            }
+
+        </script>
+    </body>
+</html>
